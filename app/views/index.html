@@ -1,20 +1,56 @@
 {% extends "layouts/main.html" %}
 
-{% set pageName="Home" %}
+{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+{% block pageTitle %}
+Home – {{serviceName}} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "alpha"
+    },
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
+{% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+	<div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-xl">
+		  {{ serviceName }}
+		</h1>
+		<h2 class="govuk-heading-m" id="about-this-prototype">About this prototype</h2>
+		<p class="govuk-body">This prototype is designed for:</p>
+		<ul class="govuk-list govuk-list--bullet">
+			<li>
+				[to be defined]
+			</li>
+		</ul>
+		<p class="govuk-body">It allows the user to:</p>
+		<ul class="govuk-list govuk-list--bullet">
+			<li>
+				find named Ofqual regulations and guidance
+			</li>
+			<li>
+				read Ofqual regulations and guidance
+			</li>
+			<li>
+				compare changes between 2 versions of regulations and guidance
+			</li>			
+		</ul>
 
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
+		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-    <h1 class="govuk-heading-xl">
-      {{ serviceName }}
-    </h1>
+		<h2 class="govuk-heading-l" id="prototypes">Prototypes</h2>
 
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
-  </div>
+		<h3 class="govuk-heading-m" id="subsection-title">Version 1</h3>
+
+		<p class='govuk-body'>Theme: Initial ideation and concepts.</p>
+		<p><a class='govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8' draggable='false' href='/v1'>Open version 1 prototype</a></p>
+	</div>
 </div>
 
 {% endblock %}
