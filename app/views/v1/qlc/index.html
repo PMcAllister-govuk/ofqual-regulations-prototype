@@ -1,0 +1,126 @@
+{% extends "layouts/main.html" %}
+
+{% set docName = 'Project qualification-level conditions' %}
+
+{% set pageName=docName %}
+
+{% block beforeContent %}
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "../../index"
+    },
+    {
+      text: "Qualification-level regulations",
+      href: "../index"
+    },
+    {
+      text: docName,
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+
+    <h1 class="govuk-heading-l">
+      {{docName}}
+    </h1>
+    <div class="govuk-body-m">Changes in version 2024-03-11 10:19</div>
+
+    {{ govukDetails({
+      summaryText: "Document information",
+      html: '<div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title" id="docinfo">Document information</h2>
+        </div>
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Last updated</dt>
+              <dd class="govuk-summary-list__value"><time datetime="2023-07-30 09:23:00+01:00" lang="en">30 July 2023, 9:23am</time></dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">In force from</dt>
+              <dd class="govuk-summary-list__value"><time datetime="2023-07-31 00:00:00+01:00" lang="en">31 July 2023, midnight</time></dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Document reference</dt>
+              <dd class="govuk-summary-list__value"><time datetime="2023-07-31 00:00:00+01:00" lang="en">31 July 2023, midnight</time></dd>
+            </div>
+          </dl>
+        </div>
+      </div>'
+    }) }}
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title" id="project1_2">Project1.2</h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Insert
+            </dt>
+            <dd>
+              Cake should be provided in all assessments for this qualification. The net mass of cake provided to each individual candidate must not be less than 200g.
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title" id="project1_2">Project1.3</h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Replace
+            </dt>
+            <dd>
+              <ol class="govuk-list" style="list-style-type: lower-alpha; list-style-position: inside;" start="2">
+                <li>for level 2 qualifications, Higher, or</li>
+                <li>for level 3 qualifications, Extended.</li>
+              </ol>
+      
+              <div class="govuk-body-m">with:</div>
+      
+              <ol class="govuk-list" style="list-style-type: lower-alpha; list-style-position: inside;" start="2">
+                <li>for level 2 qualifications, Massively Higher, or</li>
+                <li>for level 3 qualifications, Hyper Extended.</li>
+              </ol>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title" id="project1_2">Project4.3</h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Remove
+            </dt>
+            <dd>
+              In respect of each project qualification which it makes available, an awarding organisation must ensure that the monitoring which is carried out in accordance with General Condition C1.1(b) includes monitoring of whether or not Assessors are marking in a manner which is compliant with the awarding organisation's Conditions of Recognition.
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

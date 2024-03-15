@@ -1,0 +1,137 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full-width">
+
+    <div class="ofq-masthead">
+      <div class="govuk-width-container">
+        <div class="govuk-phase-banner ofq-phase-banner--inverse">
+          <p class="govuk-phase-banner__content">
+            <strong class="govuk-tag govuk-phase-banner__content__tag ofq-tag--inverse">
+              Alpha
+            </strong>
+            <span class="govuk-phase-banner__text">
+              This is a new service
+            </span>
+          </p>
+        </div>
+        <div class="govuk-breadcrumbs govuk-breadcrumbs--inverse">
+          <ol class="govuk-breadcrumbs__list">
+            <li class="govuk-breadcrumbs__list-item">
+              <a class="govuk-breadcrumbs__link" href="/">Home</a>
+            </li>
+          </ol>
+        </div>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds-from-desktop">
+            <h1 class="ofq-masthead__title">
+              {{ serviceName }}
+            </h1>
+            <p class="ofq-masthead__description">
+              Understand the regulations that apply to organisations and qualifications regulated by Ofqual. To see the exact rules which apply to a specific awarding organisation, <a href="https://ofqual-register.herokuapp.com/beta2/search-organisations/search" class="govuk-link">search for that organisation on our register</a>.
+            </p>
+            <a href="#" role="button" draggable="false" class="govuk-button govuk-button--inverse govuk-button--start" data-module="govuk-button">
+              Overview
+              <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+        <h2 class="govuk-heading-m">Regulations that apply to all awarding organisations</h2>
+
+        {{ govukDetails({
+          summaryText: "Description",
+          html: '<p class="govuk-body-s">The documents in this section apply to all organisations regulated by Ofqual, no matter which qualifications they offer.</p>'
+        }) }}
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a class="govuk-link" href="general/criteria-for-recognition">Criteria for Recognition</a></li>
+          <li><a class="govuk-link" href="general/general-conditions-of-recognition">General Conditions of Recognition</a></li>
+          <li><a class="govuk-link" href="general/criteria-of-relevance-education-act-2008">Criteria for determining whether a qualification is relevant for the purposes of the Education and Skills Act 2008</a></li>
+        </ul>
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Regulations that apply to types of qualification</h2>
+
+        {{ govukDetails({
+          summaryText: "Description",
+          html: '<p class="govuk-body-s">The documents in this section apply to all organisations that offer these specific types of qualification.</p>'
+        }) }}
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a class="govuk-link" href="slc/aea">advanced extension awards (AEA)</a></li>
+          <li><a class="govuk-link" href="slc/aaq-and-toq">alternative academic qualifications and technical occupation qualifications</a></li>
+          <li><a class="govuk-link" href="slc/epa">apprenticeship end-point assessments (Ofqual regulated)</a></li>
+          <li><a class="govuk-link" href="slc/as-and-a-level">AS and A levels (GCEs)</a></li>
+          <li><a class="govuk-link" href="slc/esol">English for speakers of other languages (ESOL) qualifications</a></li>
+          <li><a class="govuk-link" href="slc/eds">essential digital skills</a></li>
+          <li><a class="govuk-link" href="slc/fsq">functional skills qualifications</a></li>
+          <li><a class="govuk-link" href="slc/gcse">GCSEs</a></li>
+          <li><a class="govuk-link" href="slc/level1-level2">level 1 and level 2 certificates (international GCSEs)</a></li>
+          <li><a class="govuk-link" href="slc/level2-toq">level 2 technical occupation qualifications</a></li>
+          <li><a class="govuk-link" href="slc/progression">progression qualifications</a></li>
+          <li><a class="govuk-link" href="slc/project">project qualifications</a></li>
+          <li><a class="govuk-link" href="slc/ptq">qualifications included in school performance tables</a></li>
+          <li><a class="govuk-link" href="slc/technical">technical qualifications</a></li>
+        </ul>
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Regulations for specific subjects</h2>
+
+        {{ govukDetails({
+          summaryText: "Description",
+          html: '<p class="govuk-body-s">For some subjects and types of qualification, there are specific rules that apply to the subject being awarded.</p>'
+        }) }}
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a class="govuk-link" href="slc/as-and-a-level">Regulations for AS and A level subjects</a></li>
+          <li><a class="govuk-link" href="slc/gcse">Regulations for GCSE subjects</a></li>
+        </ul>
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Other regulatory documents</h2>
+
+        {{ govukDetails({
+          summaryText: "Description",
+          html: '<p class="govuk-body-s">These rules may apply to organisations offering specific qualification or under certain conditions.</p>'
+        }) }}
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a class="govuk-link" href="other/vtq-erf">Extraordinary regulatory framework: VTQ, COVID-19 Conditions and Requirements</a></li>
+          <li><a class="govuk-link" href="other/reasonable-adjustment">Specifications in relation to the reasonable adjustment of general qualifications</a></li>
+          <li><a class="govuk-link" href="other/vtq-contingency">Vocational and technical qualifications contingency regulatory framework</a></li>
+        </ul>
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Special conditions applied to awarding organisations</h2>
+
+        {{ govukDetails({
+          summaryText: "Description",
+          html: '<p class="govuk-body-s">Sometimes, when Ofqual recognises an awarding organisation, it does so conditionally. In these cases, the organisation has to follow rules specifically set for it. This is usually the case where the organisation is new or has not had a lot of previous experience offering the types of qualification it has applied to offer as regulated qualifications.</p>'
+        }) }}
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a class="govuk-link" href="special/lcm">London College of Music Examinations (University of West London)</a><br><span class="govuk-body-s">January 2024</span></li>
+          <li><a class="govuk-link" href="special/gpsas">GP Strategies Assessment Services Limited (GPSAS or GP Strategies Training Ltd.)</a><br><span class="govuk-body-s">November 2023</span></li>
+          <li><a class="govuk-link" href="special/ism">ISM Education Ltd.</a><br><span class="govuk-body-s">September 2021</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

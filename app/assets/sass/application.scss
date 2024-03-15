@@ -1,0 +1,160 @@
+//
+// For guidance on how to add CSS and SCSS see:
+// https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
+// 
+
+// Add extra styles here
+.ofq-legal-list{
+  margin-top: 1em;
+  padding-inline-start: 1.2em;
+}
+
+.ofq-legal-list-l1{
+  list-style-type: lower-alpha;
+  list-style-position: inside;
+}
+
+.ofq-legal-list-l2{
+  list-style-type: lower-roman;
+  list-style-position: inside;
+}
+
+.ofq-legal-list-l3{
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+.ofq-list{
+  padding-inline-start: 1.2em;
+  padding-left: -1.2em;
+}
+
+.ofq-masthead {
+  padding-bottom: 15px;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-top: 15px;
+  margin-bottom: 50px;
+  background-color: #1d70b8;
+  color: #ffffff;
+  display: flex;
+}
+@media (min-width: 40.0625em) {
+  .ofq-masthead {
+    padding-bottom: 20px;
+  }
+}
+.ofq-masthead > .govuk-width-container {
+  flex: 1;
+}
+
+.ofq-masthead__title {
+  font-family: system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.09375;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+@media print {
+  .ofq-masthead__title {
+    font-family: sans-serif;
+  }
+}
+@media (min-width: 40.0625em) {
+  .ofq-masthead__title {
+    font-size: 3rem;
+    line-height: 1.0416666667;
+  }
+}
+@media print {
+  .ofq-masthead__title {
+    font-size: 32pt;
+    line-height: 1.15;
+  }
+}
+@media (min-width: 40.0625em) {
+  .ofq-masthead__title {
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 40.0625em) {
+  .ofq-masthead__title {
+    margin-top: 30px;
+  }
+}
+
+.ofq-masthead__description {
+  font-family: system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 1.3125rem;
+  line-height: 1.1904761905;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+@media print {
+  .ofq-masthead__description {
+    font-family: sans-serif;
+  }
+}
+@media (min-width: 40.0625em) {
+  .ofq-masthead__description {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+}
+@media print {
+  .ofq-masthead__description {
+    font-size: 18pt;
+    line-height: 1.15;
+  }
+}
+@media (min-width: 40.0625em) {
+  .ofq-masthead__description {
+    margin-bottom: 30px;
+  }
+}
+.ofq-masthead__description a:link, .ofq-masthead__description a:visited {
+  color: #ffffff;
+}
+.ofq-masthead__description a:hover, .ofq-masthead__description a:active {
+  color: rgba(255, 255, 255, 0.99);
+}
+.ofq-masthead__description a:focus {
+  color: #0b0c0c;
+}
+
+.ofq-masthead__image {
+  padding-top: 20px;
+}
+@media (min-width: 40.0625em) {
+  .ofq-masthead__image {
+    padding-top: 30px;
+  }
+}
+.ofq-masthead__image img {
+  max-width: 100%;
+}
+@media (max-width: 48.0525em) {
+  .ofq-masthead__image {
+    display: none;
+  }
+}
+
+.ofq-phase-banner--inverse {
+  border-bottom-color: #5694ca;
+}
+.ofq-phase-banner--inverse .govuk-phase-banner__content {
+  color: #ffffff;
+}
+
+.ofq-tag--inverse {
+  background-color: #ffffff;
+  color: #2288aa;
+}
+
+
