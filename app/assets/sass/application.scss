@@ -157,4 +157,173 @@
   color: #2288aa;
 }
 
+.hods-timeline{
+  overflow:hidden;
+  position:relative;
+  font-family: system-ui, sans-serif;
+}
 
+.ofq-timeline__year{
+  margin-bottom:2em;
+  margin-top:2em;
+  padding-left:22px;
+  position:relative;
+  z-index: 1;
+}
+
+.ofq-timeline__year:before{
+  width: 0.75em;
+  height: 0.75em;
+  border-radius: 50%;
+  background-color:#1d70b8;
+  content:"";
+  padding-top:.3em;
+  padding-right:15px;
+  left:-0.75em;
+  top: -0.5em;
+  position:absolute;
+  margin-top:.55em;
+  z-index:1;
+}
+
+.hods-timeline__item{
+  margin-bottom:10px;
+  padding-left:22px;
+  position:relative;
+}
+
+.hods-timeline__item:before{
+  background-color:#1d70b8;
+  content:"";
+  padding-top:.3em;
+  padding-right:15px;
+  left:0;
+  position:absolute;
+  margin-top:.55em;
+  z-index:1;
+}
+
+.hods-timeline:before{
+  background-color:#1d70b8;
+  content:"";
+  height:100%;
+  left:0;
+  position:absolute;
+  margin-top: 3.3em;
+  padding-left:.3em;
+  z-index:1;
+}
+
+.hods-timeline__title{
+  font-family:inherit;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  font-weight:700;
+  font-size:16px;
+  font-size:1rem;
+  line-height:1.25;
+  display:inline;
+}
+
+.hods-timeline__by{
+  font-family:inherit;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  font-weight:400;
+  font-size:14px;
+  font-size:.875rem;
+  line-height:1.1428571429;
+  color:#505a5f;
+  display:inline;
+}
+
+.hods-timeline__date{
+  font-family:inherit;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  font-weight:400;
+  font-size:14px;
+  font-size:.875rem;
+  line-height:1.1428571429;
+  color:#505a5f;
+  margin-top:0;
+}
+
+.hods-timeline__description{
+  font-family:inherit;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  font-weight:400;
+  font-size:14px;
+  font-size:.875rem;
+  line-height:1.1428571429;
+  margin-top:15px;
+}
+
+@media(min-width: 40.0625em){
+  .hods-timeline__title{
+    font-size:19px;
+    font-size:1.1875rem;
+    line-height:1.3157894737;
+  }
+
+  .hods-timeline__by{
+    font-size:16px;
+    font-size:1rem;
+    line-height:1.25;
+  }
+
+  .hods-timeline__date{
+    font-size:16px;
+    font-size:1rem;
+    line-height:1.25;
+  }
+
+  .hods-timeline__description{
+    font-size:16px;
+    font-size:1rem;
+    line-height:1.25;
+  }
+
+  .hods-timeline__description{
+    margin-top:25px;
+  }
+}
+
+@media print{
+  .hods-timeline__by{
+    font-family:sans-serif;
+  }
+
+  .hods-timeline__title{
+    font-family:sans-serif;
+  }
+
+  .hods-timeline__title{
+    font-size:14pt;
+    line-height:1.15;
+  }
+
+  .hods-timeline__by{
+    font-size:14pt;
+    line-height:1.2;
+  }
+
+  .hods-timeline__date{
+    font-family:sans-serif;
+  }
+
+  .hods-timeline__date{
+    font-size:14pt;
+    line-height:1.2;
+  }
+
+  .hods-timeline__description{
+    font-size:14pt;
+    line-height:1.2;
+  }
+
+  .hods-timeline__description{
+    font-family:sans-serif;
+  }
+}

@@ -1,0 +1,78 @@
+{% extends "layouts/main.html" %}
+
+{% set docName = 'Project qualification-level conditions' %}
+
+{% block pageTitle %}
+  Changes to {{docName}}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "../../"
+    },
+    {
+      text: "Qualification-level regulations",
+      href: "../"
+    },
+    {
+      text: docName,
+      href: "index"
+    },
+    {
+      text: "Revision history"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-l">
+        Revision history for {{docName}}
+      </h1>
+
+      <div class="hods-timeline">
+        <h2 class="ofq-timeline__year">Now</h2>
+
+        <div class="hods-timeline__item">
+          <h3 class="hods-timeline__title"><time lang="en" datetime="2023-07-30 09:23:00+01:00">30 July 2023 9:23am</time></h3>
+          <p class="hods-timeline__date"><a href="index">View this version</a></p>
+          <p class="hods-timeline__description">Updated as a result of a <a href="https://www.gov.uk/government/consultations/ensuring-the-resilience-of-the-qualifications-system/ensuring-the-resilience-of-the-qualifications-system" class="govuk-link">consultation on resilience of England's exams system</a>.</p>
+        </div>
+
+        <h2 class="ofq-timeline__year">2023</h2>
+
+        <div class="hods-timeline__item">
+          <h3 class="hods-timeline__title"><time lang="en" datetime="2022-11-15 09:19+00:00">15 November 2022 at 9:19am</time></h3>
+          <p class="hods-timeline__date"><a href="#">View this version</a></p>
+        </div>
+
+        <div class="hods-timeline__item">
+          <h3 class="hods-timeline__title"><time lang="en" datetime="2022-02-19 09:30+00:00">19 February 2022 at 9:30am</time></h3>
+          <p class="hods-timeline__date"><a href="#">View this version</a></p>
+        </div>
+
+        <h2 class="ofq-timeline__year">2022</h2>
+
+        <div class="govuk-visually-hidden">No revisions in 2021</div>
+
+        <h2 class="ofq-timeline__year">2021</h2>
+
+        <div class="hods-timeline__item">
+          <h3 class="hods-timeline__title"><time lang="en" datetime="2020-01-07 09:30+00:00">7 January 2020 at 9:30am</time></h3>
+          <p class="hods-timeline__date"><a href="#">View this version</a></p>
+          <p class="hods-timeline__description">Initial version.</p>
+        </div>
+
+        <h2 class="ofq-timeline__year">2020</h2>
+      </div>
+    </div>        
+  </div>
+
+{% endblock %}

@@ -1,126 +1,59 @@
 {% extends "layouts/main.html" %}
 
-{% set docName = 'Project qualification-level conditions' %}
+{% set serviceName = "Ofqual regulations" %}
 
-{% set pageName=docName %}
+{% set pageName = "Regulations that apply to types of qualification" %}
+
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block pageTitle %}
+  {{ pageName }} – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% set backLink = "../" %}
 
 {% block beforeContent %}
-{{ govukBreadcrumbs({
-  items: [
-    {
-      text: "Home",
-      href: "../../index"
+  {{ govukPhaseBanner({
+    tag: {
+      text: "alpha"
     },
-    {
-      text: "Qualification-level regulations",
-      href: "../index"
-    },
-    {
-      text: docName,
-    }
-  ]
-}) }}
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
+  <nav>
+  {{ govukBackLink({
+  text: "Back",
+  href: backLink
+  }) }}
+  </nav>
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-three-quarters">
-
-    <h1 class="govuk-heading-l">
-      {{docName}}
-    </h1>
-    <div class="govuk-body-m">Changes in version 2024-03-11 10:19</div>
-
-    {{ govukDetails({
-      summaryText: "Document information",
-      html: '<div class="govuk-summary-card">
-        <div class="govuk-summary-card__title-wrapper">
-          <h2 class="govuk-summary-card__title" id="docinfo">Document information</h2>
-        </div>
-        <div class="govuk-summary-card__content">
-          <dl class="govuk-summary-list">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">Last updated</dt>
-              <dd class="govuk-summary-list__value"><time datetime="2023-07-30 09:23:00+01:00" lang="en">30 July 2023, 9:23am</time></dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">In force from</dt>
-              <dd class="govuk-summary-list__value"><time datetime="2023-07-31 00:00:00+01:00" lang="en">31 July 2023, midnight</time></dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">Document reference</dt>
-              <dd class="govuk-summary-list__value"><time datetime="2023-07-31 00:00:00+01:00" lang="en">31 July 2023, midnight</time></dd>
-            </div>
-          </dl>
-        </div>
-      </div>'
-    }) }}
-
-    <div class="govuk-summary-card">
-      <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title" id="project1_2">Project1.2</h2>
-      </div>
-      <div class="govuk-summary-card__content">
-        <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Insert
-            </dt>
-            <dd>
-              Cake should be provided in all assessments for this qualification. The net mass of cake provided to each individual candidate must not be less than 200g.
-            </dd>
-          </div>
-        </dl>
-      </div>
-    </div>
-
-    <div class="govuk-summary-card">
-      <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title" id="project1_2">Project1.3</h2>
-      </div>
-      <div class="govuk-summary-card__content">
-        <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Replace
-            </dt>
-            <dd>
-              <ol class="govuk-list" style="list-style-type: lower-alpha; list-style-position: inside;" start="2">
-                <li>for level 2 qualifications, Higher, or</li>
-                <li>for level 3 qualifications, Extended.</li>
-              </ol>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">{{ pageName }}</h1>
       
-              <div class="govuk-body-m">with:</div>
-      
-              <ol class="govuk-list" style="list-style-type: lower-alpha; list-style-position: inside;" start="2">
-                <li>for level 2 qualifications, Massively Higher, or</li>
-                <li>for level 3 qualifications, Hyper Extended.</li>
-              </ol>
-            </dd>
-          </div>
-        </dl>
-      </div>
-    </div>
+      <p class="govuk-body-m">The documents in this section apply to all organisations that offer these specific types of qualification. They are sometimes called qualification-level conditions.</p>
 
-    <div class="govuk-summary-card">
-      <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title" id="project1_2">Project4.3</h2>
-      </div>
-      <div class="govuk-summary-card__content">
-        <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Remove
-            </dt>
-            <dd>
-              In respect of each project qualification which it makes available, an awarding organisation must ensure that the monitoring which is carried out in accordance with General Condition C1.1(b) includes monitoring of whether or not Assessors are marking in a manner which is compliant with the awarding organisation's Conditions of Recognition.
-            </dd>
-          </div>
-        </dl>
-      </div>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a class="govuk-link" href="aea/">advanced extension awards (AEA)</a></li>
+        <li><a class="govuk-link" href="aaq-and-toq/">alternative academic qualifications and technical occupation qualifications</a></li>
+        <li><a class="govuk-link" href="epa/">apprenticeship end-point assessments (Ofqual regulated)</a></li>
+        <li><a class="govuk-link" href="as-and-a-level/">AS and A levels (GCEs)</a></li>
+        <li><a class="govuk-link" href="esol/">English for speakers of other languages (ESOL) qualifications</a></li>
+        <li><a class="govuk-link" href="eds/">essential digital skills</a></li>
+        <li><a class="govuk-link" href="fsq/">functional skills qualifications</a></li>
+        <li><a class="govuk-link" href="gcse/">GCSEs</a></li>
+        <li><a class="govuk-link" href="level1-level2/">level 1 and level 2 certificates (international GCSEs)</a></li>
+        <li><a class="govuk-link" href="level2-toq/">level 2 technical occupation qualifications</a></li>
+        <li><a class="govuk-link" href="progression/">progression qualifications</a></li>
+        <li><a class="govuk-link" href="project/">project qualifications</a></li>
+        <li><a class="govuk-link" href="ptq/">qualifications included in school performance tables</a></li>
+        <li><a class="govuk-link" href="technical/">technical qualifications</a></li>
+      </ul>
     </div>
   </div>
-</div>
 
 {% endblock %}

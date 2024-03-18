@@ -2,6 +2,18 @@
 
 {% set pageName="Home" %}
 
+{% set serviceName = "Ofqual regulations" %}
+
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block pageTitle %}
+  {{ pageName }} – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% set backLink = "../" %}
+
 {% block content %}
 
 <div class="govuk-grid-row">
@@ -15,7 +27,7 @@
               Alpha
             </strong>
             <span class="govuk-phase-banner__text">
-              This is a new service
+              This is a new service – your <a class="govuk-link govuk-link--inverse" href="#">feedback</a> will help us to improve it.
             </span>
           </p>
         </div>
@@ -87,7 +99,7 @@
 
         {{ govukDetails({
           summaryText: "Description",
-          html: '<p class="govuk-body-s">The documents in this section apply to all organisations that offer these specific types of qualification.</p>'
+          html: '<p class="govuk-body-s">The documents in this section apply to all organisations that offer these specific types of qualification.  They are sometimes called qualification-level conditions.</p>'
         }) }}
 
         <ul class="govuk-list govuk-list--bullet">
@@ -113,7 +125,7 @@
 
         {{ govukDetails({
           summaryText: "Description",
-          html: '<p class="govuk-body-s">For some subjects and types of qualification, there are specific rules that apply to the subject being awarded.</p>'
+          html: '<p class="govuk-body-s">For some subjects and types of qualification, there are specific rules that apply to the subject being awarded. They are sometimes called subject-level conditions.</p>'
         }) }}
 
         <ul class="govuk-list govuk-list--bullet">
@@ -142,7 +154,7 @@
 
         {{ govukDetails({
           summaryText: "Description",
-          html: '<p class="govuk-body-s">Sometimes, when Ofqual recognises an awarding organisation, it does so conditionally. In these cases, the organisation has to follow rules specifically set for it. This is usually the case where the organisation is new or has not had a lot of previous experience offering the types of qualification it has applied to offer as regulated qualifications.</p>'
+          html: '<p class="govuk-body-s">Sometimes, when Ofqual recognises an awarding organisation, it does so conditionally. In these cases, the organisation has to follow rules specifically set for it. This is usually the case where the organisation is new or has not had a lot of previous experience offering the types of qualification it has applied to offer as regulated qualifications, but it may also happen after an audit or investigation of an organisation.</p>'
         }) }}
 
         <ul class="govuk-list govuk-list--bullet">

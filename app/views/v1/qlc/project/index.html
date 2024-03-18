@@ -34,11 +34,20 @@
       {{docName}}
     </h1>
 
-    {{ govukNotificationBanner({
-      html: '<p class="govuk-notification-banner__heading">
-        Ofqual is currently consulting on changes to these regulations. The consultation closes <time datetime="2024-08-12 23:55:00+01:00" lang="en">12 August 2024 at 23:55pm</time>.</p>
-        <p class="govuk-notification-banner__heading"><a class="govuk-notification-banner__link" href="#">View consultation</a></p>'
-    }) }}
+    {% if not data.hideConsultation %}
+
+      {{ govukNotificationBanner({
+        html: '<p class="govuk-notification-banner__heading">
+          Ofqual is currently consulting on changes to these regulations. The consultation closes <time datetime="2024-08-12 23:55:00+01:00" lang="en">12 August 2024 at 23:55pm</time>.</p>
+          <p class="govuk-notification-banner__heading"><a class="govuk-notification-banner__link" href="#">View consultation</a></p>'
+      }) }}
+    {% endif %}
+
+    {% if not data.hideGuidance %}
+      {{ govukInsetText({
+        html: 'There is guidance available for these regulations.<br/><a href="guidance" class="govuk-link">View guidance</a>'
+      }) }}
+    {% endif %}
 
     {{ govukDetails({
       summaryText: "Document information",
@@ -68,7 +77,7 @@
       </div> 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-          <p class="govuk-body-s"><a href="revision-history" class="govuk-link">Document revision history</a></p>
+          <p class="govuk-body-s"><a href="revisions" class="govuk-link">Document revision history</a></p>
         </div>
       </div>  
       '
