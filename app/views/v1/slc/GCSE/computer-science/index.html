@@ -1,0 +1,356 @@
+{% extends "layouts/main.html" %}
+
+{% set docName = 'GCSE computer science subject-level conditions' %}
+{% set updateTime = '9:30am on 18 February 2019' %}
+{% set updateDay = '18 February 2019' %}
+{% set inForceFrom = '5:01pm on 18 February 2019' %}
+{% set docRef = 'OFR/SLC/GCSE/COMPSCI/2019-02-18/1' %}
+{% set pageName=docName %}
+
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "alpha"
+    },
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "../../../"
+      },
+      {
+        text: "Regulations for specific subjects",
+        href: "../../"
+      },
+      {
+        text: 'GCSE',
+        href: "../"
+      },
+      {
+        text: pageName
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row" data-module="edge">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      {{docName}}
+    </h1>
+
+    {% if data.showArchived %}
+
+      {{ govukNotificationBanner({
+        html: '<p class="govuk-notification-banner__heading">
+          This document is no longer in force and is made available for reference only. It has not been replaced by any other document.</p>'
+      }) }}
+    {% endif %}
+
+    {% if not data.hideGuidance %}
+      {{ govukInsetText({
+        html: 'There is guidance available for these regulations.<br/><a href="#" class="govuk-link">View guidance</a>'
+      }) }}
+    {% endif %}
+
+    {{ govukDetails({
+      summaryText: "Document information",
+      html: '<div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <h2 class="govuk-heading-m" id="docinfo">Document information</h2>
+        </div>
+      </div>
+      <dl>
+        <div class="govuk-grid-row">
+          <dt class="govuk-grid-column-one-quarter govuk-!-font-weight-bold">Last updated</dt>
+          <dd class="govuk-grid-column-one-half"><time datetime="2019-02-18 09:30:00+00:00" lang="en">' + updateTime + '</time></dd>
+        </div>
+        <div class="govuk-grid-row">
+          <dt class="govuk-grid-column-one-quarter govuk-!-font-weight-bold">In force from</dt>
+          <dd class="govuk-grid-column-one-half"><time datetime="2019-02-18 17:01:00+00:00" lang="en">' + inForceFrom + '</time></dd>
+        </div>
+        <div class="govuk-grid-row">
+          <dt class="govuk-grid-column-one-quarter govuk-!-font-weight-bold">Document ref</dt>
+          <dd class="govuk-grid-column-one-half">' + docRef + '</dd>
+        </div>
+      </dl>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-body-s"><a href="#" class="govuk-link">Changes from previous version</a></p>
+        </div>
+      </div> 
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-body-s"><a href="#" class="govuk-link">Document revision history</a></p>
+        </div>
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-body-s">
+            <a href="#"><svg fill="#1D70B8" width="18px" height="18px" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="vertical-align: text-bottom;">
+             <g>
+              <path d="m54.168 56.609 16.457-16.457 5.8906 5.8906-26.516 26.516-26.516-26.516 5.8906-5.8906 16.457 16.457v-44.109h8.3359z"/>
+              <path d="m12.5 79.168v-16.668h8.332v16.668h58.336v-16.668h8.332v16.668c0 4.6016-3.7305 8.332-8.332 8.332h-58.336c-4.6016 0-8.332-3.7305-8.332-8.332z"/>
+             </g>
+            </svg></a>
+            <a href="#" class="govuk-link">Download PDF version</a>
+          </p>
+        </div>
+      </div>
+      '
+    }) }}
+
+    {{ govukDetails({
+      summaryText: "Contents",
+      html: '<div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
+          <h2 class="govuk-heading-m" id="contents">Contents</h2>
+        </div>
+      </div>
+      <nav>
+        <ul class="govuk-list ofq-list">
+          <li><a class="govuk-link" href="#regscope">Regulatory scope</a></li>
+          <li><a class="govuk-link" href="#covering">Requirements set out in this document</a></li>
+          <li><a class="govuk-link" href="#revisions">Revisions to this document</a></li>
+          <li><a class="govuk-link" href="#regulations">Subject-level conditions</a>
+            <ul class="govuk-list ofq-list">
+              <li><a class="govuk-link" href="#s1">Condition GCSE(Computer Science)1 – Compliance with content requirements</a></li>
+              <li><a class="govuk-link" href="#s2">Condition GCSE(Computer Science)2 – Assessment</a></li>
+              <li><a class="govuk-link" href="#s3">Condition GCSE(Computer Science)3 – Practical programming statement</a></li>
+            </ul>
+          </li>
+          <li><a class="govuk-link" href="#assessment-objectives">Assessment objectives</a></li>
+          <li><a class="govuk-link" href="#requirements-for-assessments">Requirements for assessments</a></li>
+        </ul>
+      </nav>'
+    }) }}
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div id="regs-start">
+      <h2 id="regscope" class="govuk-heading-m">Regulatory scope</h2>
+
+      <p class="govuk-body">These regulations apply to all GCSE qualifications in computer science (graded from 9 to 1), examined during or after the 2021 to 2022 academic year.</p>
+
+      <h2 id="covering" class="govuk-heading-m">Requirements set out in this document</h2>
+
+      <p class="govuk-body">This document sets out the {{docName}}. These conditions will come into effect at {{inForceFrom}} for all project qualifications.</p>
+
+      <p class="govuk-body">It also sets out our requirements in relation to:
+        <ul class="govuk-list govuk-list--bullet">
+          <li>assessment objectives – awarding organisations must comply with these requirements under Condition <a href="#s1c2" class="govuk-link">GCSE(Computer Science)1.2</a></li>
+          <li>assessments – awarding organisations must comply with these requirements under Condition <a href="#s1c2" class="govuk-link">GCSE(Computer Science)2.1</a>.</li>
+        </ul>
+      </p>
+      <p class="govuk-body">Awarding organisations must also comply with the <a href="https://www.gov.uk/government/publications/gcse-computer-science" class="govuk-link">Department for Education's requirements in relation to subject content for GCSE Computer Science</a>.</p>
+
+
+      <h2 class="govuk-heading-m" id="revisions">Revisions to this document</h2>
+      <p class="govuk-body">We have <a href="#" class="govuk-link">revised this document</a> since it was originally published, most recently on {{updateDay}}.</p>
+      <p class="govuk-body">The {{updateDay}} version of this document replaces all previous versions of {{docName}} with effect from {{inForceFrom}}.</p>
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m" id="regulations">Subject-level conditions</h2>
+
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h3 class="govuk-summary-card__title" id="s1">Condition GCSE(Computer Science)1 – Compliance with content requirements</h3>
+        </div>
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row" id="s1c1">
+              <dt class="govuk-summary-list__key">
+                GCSE(Computer Science)1.1
+              </dt>
+              <dd class="govuk-summary-list__value">
+                In respect of each GCSE Qualification in Computer Science which it makes available, or proposes to make available, an awarding organisation must –
+                <ol class="govuk-list ofq-legal-list ofq-legal-list-l1">
+                  <li>comply with the requirements relating to that qualification set out in the document published by the Secretary of State entitled '<a href="https://www.gov.uk/government/publications/gcse-computer-science" class="govuk-link">Computer science GCSE subject content</a>', document reference DFE-00701-2014,</li>
+                  <li>have regard to any recommendations or guidelines relating to that qualification set out in that document, and</li>
+                  <li>interpret that document in accordance with any requirements, and having regard to any guidance, which may be published by Ofqual and revised from time to time.</li>
+                </ol>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row" id="s1c2">
+              <dt class="govuk-summary-list__key">
+                GCSE(Computer Science)1.2
+              </dt>
+              <dd class="govuk-summary-list__value">
+                In respect of each GCSE Qualification in Computer Science which it makes available, or proposes to make available, an awarding organisation must comply with any requirements, and have regard to any guidance, relating to the objectives to be met by any assessment for that qualification which may be published by Ofqual and revised from time to time.
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h3 class="govuk-summary-card__title" id="s2">Condition GCSE(Computer Science)2 – Assessment</h3>
+        </div>
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row" id="s2c1">
+              <dt class="govuk-summary-list__key">
+                GCSE (Computer Science)2.1
+              </dt>
+              <dd class="govuk-summary-list__value">
+                An awarding organisation must ensure that in respect of each assessment for a GCSE Qualification in Computer Science which it makes available it complies with any requirements, and has regard to any guidance, which may be published by Ofqual and revised from time to time.
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h3 class="govuk-summary-card__title" id="s3">Condition GCSE(Computer Science)3 – Practical programming statement</h3>
+        </div>
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row" id="s3c1">
+              <dt class="govuk-summary-list__key">
+                GCSE(Computer Science)3.1
+              </dt>
+              <dd class="govuk-summary-list__value">
+                In respect of each assessment cycle for a GCSE qualification in Computer Science which it makes available, an awarding organisation must –
+                <ol class="govuk-list ofq-legal-list ofq-legal-list-l1">
+                  <li id="s3c1_a">require each centre to provide a practical programming statement to the awarding organisation, and</li>
+                  <li id="s3c1_b">treat any failure by a Centre to provide a practical programming statement to awarding organisation in a timely manner as malpractice and/or maladministration (under <a href="#" class="govuk-link">General Condition A8 (Malpractice and maladministration)</a>).</li>
+                </ol>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row" id="s3c2">
+              <dt class="govuk-summary-list__key">
+                GCSE(Computer Science)3.2
+              </dt>
+              <dd class="govuk-summary-list__value">
+                For the purpose of this condition, a 'practical programming statement' is a true and accurate written statement made by a Centre to an awarding organisation which confirms that it has taken reasonable steps to ensure that each Learner to which that Centre has delivered the assessments to be taken in a particular assessment cycle for a GCSE Qualification in Computer Science which the awarding organisation makes available has had the opportunity to undertake a programming task (or tasks) during their course of study which allows them to develop the skills to:
+                <ul class="govuk-list ofq-legal-list govuk-list--bullet">
+                  <li>design,</li>
+                  <li>write,</li>
+                  <li>test, and</li>
+                  <li>refine programs</li>
+                </ul>
+                using one or more high-level programming language with a textual program definition, either to a specification or to solve a problem (or problems).
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <h2 class="govuk-heading-m" id="assessment-objectives">Assessment objectives</h2>
+
+      <p class="govuk-body">Condition <a href="#s1p2">GCSE(Computer Science)1.2</a> allows us to specify requirements relating to the objectives to be met by any assessment for all GCSE Qualifications in Computer Science.</p>
+      <p class="govuk-body">The assessment objectives set out below constitute requirements for the purposes of Condition <a href="#s1p2">GCSE(Computer Science)1.2</a>. Awarding organisations must comply with these requirements in relation to all GCSE Qualifications in Computer Science they make available or propose to make available.</p>
+
+      {{ govukTable({
+        caption: "Assessment objectives and weightings",
+        captionClasses: "govuk-table__caption--s",
+        firstCellIsHeader: true,
+        head: [
+          {
+            text: "Assessment objective"
+          },
+          {
+            text: "Description"
+          },
+          {
+            text: "Weighting"
+          }
+        ],
+        rows: [
+          [
+            {
+              text: "AO1"
+            },
+            {
+              text: "Demonstrate knowledge and understanding of the key concepts and principles of computer science."
+            },
+            {
+              text: "30%"
+            }
+          ],
+          [
+            {
+              text: "AO2"
+            },
+            {
+              text: "Apply knowledge and understanding of key concepts and principles of computer science."
+            },
+            {
+              text: "40%"
+            }
+          ],
+          [
+            {
+              text: "AO3"
+            },
+            {
+              html: 'Analyse problems in computational terms:<ul class="govuk-list govuk-list--bullet"><li>to make reasoned judgements</li><li>to design, program, evaluate and refine solutions</li></ul>'
+            },
+            {
+              text: "30%"
+            }
+          ]
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m" id="requirements-for-assessments">Requirements for assessments</h2>
+
+      <p class="govuk-body">Condition <a href="#s2p1" class="govuk-link">GCSE(Computer Science)2.1</a> allows us to specify requirements and guidance in relation to assessments for GCSE Qualification in Computer Science.</p>
+      <p class="govuk-body">We set out below our requirements for the purposes of Condition <a href="#s2p1" class="govuk-link">GCSE(Computer Science)2.1</a>. Awarding organisations must comply with these requirements in relation to all GCSE Qualifications in Computer Science they make available.</p>
+
+      <h3 class="govuk-heading-s">Programming languages</h3>
+      <p class="govuk-body">For each GCSE Qualification in Computer Science which it makes available, or proposes to make available, an awarding organisation must ensure that –
+        <ol class="govuk-list ofq-legal-list ofq-legal-list-l1">
+          <li>it sets out in the specification for that qualification the programming language(s) which Learners are permitted to use for the purposes of the assessments,</li>
+          <li>each such programming language is a high-level programming language that has a textual program definition, and</li>
+          <li>it justifies its choice of permitted programming language(s) in its assessment strategy for the qualification.</li>
+        </ol>
+      </p>
+
+      <h3 class="govuk-heading-s">Assessment of Programming Skills</h3>
+      <p class="govuk-body">The subject content for GCSE Qualifications in Computer Science is set out in the document published by the Secretary of State entitled '<a href="https://www.gov.uk/government/publications/gcse-computer-science" class="govuk-link">Computer Science GCSE subject content</a>', document reference DFE-00701-2104 (the 'Content Document').</p>
+      <p class="govuk-body">Paragraph 5 of the Content Document states that GCSE Qualification in Computer Science must –</p>
+      <blockquote class="govuk-body ofq-quote__container" cite="https://www.gov.uk/government/publications/gcse-computer-science">
+        <p>&#8230;require students to develop the following skills:<br>
+          &#8230;<br>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>design, write, test and refine programs, using one or more high-level programming language with a textual program definition, either to a specification or to solve a problem</li>
+          </ul>
+        </p>
+      </blockquote>
+      <p class="govuk-body">In designing and setting the assessments for a GCSE Qualification in Computer Science which it makes available, or proposes to make available, an awarding organisation must ensure that – taking those assessments together – Learners are required to –
+        <ul class="govuk-list govuk-list--bullet ofq-legal-list">
+          <li>design,</li>
+          <li>write,</li>
+          <li>test, and</li>
+          <li>refine</li>
+        </ul>
+      </p>
+      <p class="govuk-body">a program to a set task/brief (or to solve a problem), using one or more high-level programming language with a textual program definition (together, the ‘Programming Skills').
+      </p>
+      <p class="govuk-body">For clarity, assessments may require Learners to demonstrate each of the Programming Skills –
+        <ol class="govuk-list ofq-legal-list ofq-legal-list-l1">
+          <li>separately, or in any combination, and</li>
+          <li>in relation to one or more separate tasks, briefs or problems.</li>
+        </ol>
+      </p>
+      <p class="govuk-body">An awarding organisation must demonstrate to Ofqual's satisfaction in its assessment strategy that –
+        <ol class="govuk-list ofq-legal-list ofq-legal-list-l1">
+          <li>it has taken all reasonable steps to identify the risk of any Adverse Effect which may result from its approach to assessing Programming Skills, and</li>
+          <li>where such a risk is identified, it has taken all reasonable steps to prevent that Adverse Effect or, where it cannot be prevented, to mitigate that Adverse Effect</li>
+        </ol>
+      </p>
+
+    </div>
+  </div>
+</div>
+{% endblock %}

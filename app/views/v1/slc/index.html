@@ -1,20 +1,52 @@
 {% extends "layouts/main.html" %}
 
-{% set pageName="Home" %}
+{% set serviceName = "Ofqual regulations" %}
+
+{% set pageName = "Regulations for specific subjects" %}
+
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block pageTitle %}
+  {{ pageName }} – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% set backLink = "../" %}
+
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "alpha"
+    },
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "../"
+      },
+      {
+        text: pageName
+      }
+    ]
+  }) }}
+{% endblock %}
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-row" data-module="edge">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">{{ pageName }}</h1>
 
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
-
-    <h1 class="govuk-heading-xl">
-      {{ serviceName }}
-    </h1>
-
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
+      <p class="govuk-body-m">For some subjects and types of qualification, there are specific rules that apply to the subject being awarded. They are sometimes called subject-level conditions.</p>
+      <ul class="govuk-list govuk-list--spaced">
+        <li><a class="govuk-link" href="#">Regulations for AS and A level subjects</a></li>
+        <li><a class="govuk-link" href="gcse/">Regulations for GCSE subjects</a> &lt; this one</li>
+      </ul>
+    </div>
   </div>
-</div>
 
 {% endblock %}

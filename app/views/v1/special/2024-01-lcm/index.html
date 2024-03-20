@@ -1,0 +1,365 @@
+{% extends "layouts/main.html" %}
+
+{% set docName = 'London College of Music Examinations' %}
+{% set updateTime = '10am on 10 January 2024' %}
+{% set updateDay = '10 January 2024' %}
+{% set firstPublished = '10am on 10 January 2024' %}
+{% set docRef = 'OFR/SC/UWL/2024-01-10/1' %}
+{% set pageName=docName %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "../../"
+    },
+    {
+      text: "Conditions for specific organisations",
+      href: "../"
+    },
+    {
+      text: docName
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row" data-module="edge">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      {{docName}}
+    </h1>
+
+    {{ govukDetails({
+      summaryText: "Document information",
+      html: '<div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <h2 class="govuk-heading-m" id="docinfo">Document information</h2>
+        </div>
+      </div>
+      <dl>
+        <div class="govuk-grid-row">
+          <dt class="govuk-grid-column-one-quarter govuk-!-font-weight-bold">Last updated</dt>
+          <dd class="govuk-grid-column-one-half"><time datetime="2024-01-10 10:00:00+00:00" lang="en">' + updateTime + '</time></dd>
+        </div>
+        <div class="govuk-grid-row">
+          <dt class="govuk-grid-column-one-quarter govuk-!-font-weight-bold">First published</dt>
+          <dd class="govuk-grid-column-one-half"><time datetime="2024-01-10 10:00:00+00:00" lang="en">' + firstPublished + '</time></dd>
+        </div>
+        <div class="govuk-grid-row">
+          <dt class="govuk-grid-column-one-quarter govuk-!-font-weight-bold">Document ref</dt>
+          <dd class="govuk-grid-column-one-half">' + docRef + '</dd>
+        </div>
+      </dl>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-body-s"><a href="#" class="govuk-link">Document revision history</a></p>
+        </div>
+      </div>  
+      '
+    }) }}
+
+    {{ govukDetails({
+      summaryText: "Contents",
+      html: '<div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
+          <h2 class="govuk-heading-m" id="contents">Contents</h2>
+        </div>
+      </div>
+      <nav>
+        <ul class="govuk-list ofq-list">
+          <li><a class="govuk-link" href="#summary">Summary</a></li>
+          <li><a class="govuk-link" href="#details">Details</a></li>
+            <ul class="govuk-list ofq-list">
+              <li><a class="govuk-link" href="#s1">Condition UWL1 – Third-party arrangements</a></li>
+              <li><a class="govuk-link" href="#s2">Condition UWL2 – Review of marking and certification</a></li>
+              <li><a class="govuk-link" href="#s3">Condition UWL3 – Interpretation and definitions</a></li>
+              <li><a class="govuk-link" href="#sig">Signatory</a></li>
+            </ul>
+          </li>
+          <li><a class="govuk-link" href="#annex">Annex</a></li>
+
+        </ul>
+      </nav>'
+    }) }}
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div id="regs-start">
+      <h2 id="summary" class="govuk-heading-m">Summary</h2>
+
+      <p class="govuk-body">Ofqual has imposed special conditions on the University of West London (UWL), trading as London College of Music Examinations (LCME), requiring it to:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>suspend any arrangements under which UWL delegates responsibility for the following activities to a third party:
+          <ul class="govuk-list govuk-list--bullet">
+            <li>design and/or development of a qualification and/or any assessment materials</li>
+            <li>marking of assessment materials</li>
+            <li>issuing results and certificates</li>
+          </ul>
+        </li>
+        <li>refrain from reinstating those arrangements and/or entering into similar arrangements without the prior written consent of Ofqual's Director of VTQ Operations</li>
+        <li>commission an independent audit to review historic compliance with the General Conditions of Recognition in circumstances where UWL had delegated responsibility for the following activities to a third party:
+          <ul class="govuk-list govuk-list--bullet">
+            <li>design and/or development of a qualification and/or any assessment materials</li>
+            <li>marking of assessment materials</li>
+          </ul>
+        </li>
+        <li>issuing results and certificates</li>
+      </ul>
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m" id="details">Details</h2>
+
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h3 class="govuk-summary-card__title" id="s1">Condition UWL1 – Third-party arrangements</h3>
+        </div>
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row" id="s1c1">
+              <dt class="govuk-summary-list__key">
+                UWL1.1
+              </dt>
+              <dd class="govuk-summary-list__value">
+                UWL must take all reasonable steps to immediately suspend any arrangements under which UWL delegates responsibility for the following activities to a third party:
+                <ol class="govuk-list ofq-legal-list ofq-legal-list-l1">
+                  <li id="s1c1_a">d§esign and/or development of a qualification and/or any assessment materials</li>
+                  <li id="s1c1_b">marking of assessment materials</li>
+                  <li id="s1c1_c">issuing results and certificates</li>
+                </ol>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row" id="s1c2">
+              <dt class="govuk-summary-list__key">
+                UWL1.2
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Within 7 days of suspending any arrangements pursuant to Special Condition <a href="#s1c1" class="govuk-link">UWL 1.1</a>, UWL must provide to Ofqual:
+                <ol type="a" class="govuk-list ofq-legal-list ofq-legal-list-l1">
+                  <li id="s1c2_a">the name and address of the third party</li>
+                  <li id="s1c2_b">a summary of any tasks delegated to the third party prior to the suspension under <a class="govuk-link" href="#s1c1">UWL 1.1</a></li>
+                  <li id="s1c1_c">a copy of the contract governing the arrangements between UWL and the third party</li>
+                </ol>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row" id="s1c3">
+              <dt class="govuk-summary-list__key">
+                UWL1.3
+              </dt>
+              <dd class="govuk-summary-list__value">
+                In the event that UWL has been unable to suspend any arrangements pursuant to Condition <a href="#s1c1" class="govuk-link">UWL 1.1</a> within 14 days of these Special Conditions coming into force, UWL must provide Ofqual with:
+                <ol type="a" class="govuk-list ofq-legal-list ofq-legal-list-l1">
+                  <li>the name and address of the third party</li>
+                  <li>a summary of any tasks currently delegated to the third party</li>
+                  <li>a copy of the contract governing the arrangements between UWL and the third party</li>
+                  <li>a summary of its efforts to comply with Condition <a href="#s1c1" class="govuk-link">UWL 1.1</a></li>
+                  <li>the reason(s) why it has been unable to suspend those arrangements</li>
+                  <li>its proposed timescale to suspend those arrangements</li>
+                </ol>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row" id="s1c4">
+              <dt class="govuk-summary-list__key">
+                UWL1.4
+              </dt>
+              <dd class="govuk-summary-list__value">
+                UWL must not reinstate and/or resume any of those contracts suspended pursuant to <a href="#s1c1" class="govuk-link">UWL 1.1</a> and/or enter into any new arrangements under which UWL delegates responsibility for the following activities to a third party:
+                <ol class="govuk-list ofq-legal-list ofq-legal-list-l1">
+                  <li>design and/or development of a qualification and/or any assessment materials</li>
+                  <li>marking of assessment materials</li>
+                  <li>issuing results and certificates</li>
+                </ol>
+                until such time as Ofqual's Executive Director for Vocational and Technical Qualifications confirms, in writing, that UWL has demonstrated to her satisfaction that:
+                <ol class="govuk-list ofq-legal-list ofq-legal-list-l1" start="4">
+                  <li>it has the capacity to undertake the development, delivery and award of qualifications which it makes available, or proposes to make available, in accordance with its Conditions of Recognition</li>
+                  <li>where it delegates to a third party any aspect of the design, delivery and award of a qualification, it has in place suitable arrangements to allow it to monitor and, where appropriate, enforce those arrangements to ensure compliance with its Condition of Recognition.</li>
+                </ol>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h3 class="govuk-summary-card__title" id="s2">Condition UWL2 – Review of marking and certification</h3>
+        </div>
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row" id="s2c1">
+              <dt class="govuk-summary-list__key">
+                UWL2.1
+              </dt>
+              <dd class="govuk-summary-list__value">
+                UWL must commission an independent audit to review all Delegated Third Party Activities undertaken by third parties between 1 January 2020 and 17 November 2023.  The independent auditor should be asked to prepare a report (‘the UWL Audit Report') that separately summarises for each third party that has undertaken Delegated Third Party Activities:
+                <ol type="a" class="govuk-list ofq-legal-list ofq-legal-list-l1">
+                  <li>What processes did UWL have in place to ensure that Learners with a valid entitlement were issued a certificate (<a href="#" class="govuk-link">Condition I4.2(a)</a>) and that Learners without a valid entitlement were not issued a certificate (<a href="#" class="govuk-link">Condition I4.2(b)</a>)?</li>
+                  <li>How many assessments were sat by Learners?</li>
+                  <li>Whether the assessment materials used in those assessments had been approved by UWL</li>
+                  <li>Whether those assessments were marked by Assessors who were on UWL's list of approved assessors</li>
+                  <li>Whether the marking of the assessments was completed consistently in accordance with UWL's mark scheme</li>
+                  <li>How many certificates did UWL instruct the third party to issue?</li>
+                  <li>How many certificates were awarded by the third party?</li>
+                  <li>How many learners claimed not to have received certificates from UWL and/or the Third Party?</li>
+                  <li>How many of those claims remain unresolved?</li>
+                </ol>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row" id="s2c2">
+              <dt class="govuk-summary-list__key">
+                UWL2.2
+              </dt>
+              <dd class="govuk-summary-list__value">
+                UWL must deliver the UWL Audit Report and any drafts of the UWL Audit Report to Ofqual promptly upon receipt, but in any event, no later than 9 February 2024.
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row" id="s2c3">
+              <dt class="govuk-summary-list__key">
+                UWL2.3
+              </dt>
+              <dd class="govuk-summary-list__value">
+                UWL must notify Ofqual promptly if they have any reason to believe that they will be unable to comply with <a href="#s2c2" class="govuk-link">Condition UWL 2.2</a>.
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h3 class="govuk-summary-card__title" id="s3">Condition UWL3 – Interpretation and definitions</h3>
+        </div>
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row" id="s3c1">
+              <dt class="govuk-summary-list__key">
+                UWL3.1
+              </dt>
+              <dd class="govuk-summary-list__value">
+                The rules of interpretation and definitions outlined in <a href="#" class="govuk-link">General Condition J1</a> shall apply to these Special Conditions.
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row" id="s3c2">
+              <dt class="govuk-summary-list__key">
+                UWL3.2
+              </dt>
+              <dd class="govuk-summary-list__value">
+                For the purposes of these Special Conditions, the following additional definitions apply:
+                <ol class="govuk-list ofq-legal-list ofq-legal-list-l1">
+                  <li>Delegated Third Party activities refers to any of the following activities that UWL has delegated to a third party:
+                    <ol class="govuk-list ofq-legal-list ofq-legal-list-l2">
+                      <li>design of a qualification and/or any assessment materials</li>
+                      <li>marking of assessment materials</li>
+                      <li>issuing results and certificates</li>
+                    </ol>
+                  </li>
+                  <li>the UWL Audit Report refers to the report produced by the independent auditor pursuant to <a href="#s2c1" class="govuk-link">UWL 2.1</a> and which should include in its appendices:
+                    <ol class="govuk-list ofq-legal-list ofq-legal-list-l2">
+                      <li>the original letter of instruction</li>
+                      <li>any correspondence between UWL and the auditor</li>
+                      <li>a copy of Ofqual's statement of reasons dated 2 October 2023</li>
+                    </ol>
+                  </li>
+                </ol>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row" id="s3c3">
+              <dt class="govuk-summary-list__key">
+                UWL3.3
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Except in the circumstances described in Condition <a href="#s3c4" class="govuk-link">UWL 3.4</a>, the requirements imposed by these Special Conditions apply in addition to the requirements imposed by the <a href="#" class="govuk-link">General Conditions of Recognition</a> and any relevant Qualification Level Conditions and Subject Level Conditions.
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row" id="s3c4">
+              <dt class="govuk-summary-list__key">
+                UWL3.4
+              </dt>
+              <dd class="govuk-summary-list__value">
+                To the extent that there is any inconsistency between –
+                <ol type="a" class="govuk-list ofq-legal-list ofq-legal-list-l1">
+                  <li>a requirement of one of these Special Conditions, and</li>
+                  <li>a requirement of a General Condition of Recognition, a Qualification Level Condition or a Subject Level Condition,</li>
+                </ol>
+                such that UWL could not comply with both such requirements, the awarding organisation must comply with the requirement of the Special Condition and is not obliged to comply with the requirement of the other Condition.
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h3 class="govuk-summary-card__title" id="signatory">Signatory</h3>
+        </div>
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row" id="s3c1">
+              <dt class="govuk-summary-list__key">
+                Signed by
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Emma Scott<br/>Director of Operations for Vocational and Technical Qualifications, Ofqual
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="annex" class="govuk-heading-m">Annex to special conditions</h2>
+
+    <h3 id="publiscation-and-sharing-of-information" class="govuk-heading-s">Publication and sharing of information</h3>
+    <p>Ofqual may publish a Special Condition, either fully or in part, on its website unless Ofqual is persuaded by an awarding organisation that there is a legitimate reason that this should not be published, including that this may have adverse commercial implications for the awarding organisation involved. Ofqual does not propose to publish these Special Conditions at the time they are imposed, but may consider publication at a later date. Ofqual will consult with UWL before publishing these Special Conditions.</p>
+    <p>Ofqual may share information about these Special Conditions with other regulators in accordance with its powers, where it considers necessary.</p>
+    
+    <h3 class="govuk-heading-s">Right of internal review</h3>
+    <p>UWL may request an internal review of the decision to impose a Special Condition within 10 working days of the date the Special Condition was imposed. The request must be made via the Portal, with the subject line - for the attention of the Legal Moderation and Enforcement team.</p>
+    <p>An internal review may be requested on the following grounds only:
+      <ol class="govuk-list ofq-legal-list ofq-legal-list-l1">
+        <li>the facts of the decision for imposing a Special Condition are incorrect</li>
+        <li>a relevant fact has not been taken into account</li>
+        <li>Ofqual has not followed its own procedures</li>
+        <li>the decision to impose a Special Condition does not support the facts, an unreasonable decision</li>
+      </ol>
+    </p>  
+    <p>Any internal review will be carried out by an officer of Ofqual who has had no previous involvement in your matter.</p>
+
+    <h3 class="govuk-heading-s">Ofqual review</h3>
+    <p>On or after 10 January 2025 (the 'review date'), Ofqual will review whether the requirements of these Special Conditions need to remain in place and will issue its decision to UWL. UWL may request that Ofqual carries out this review before the specified review date if it believes some or all of the requirements no longer need to remain in place. UWL should provide evidence to support any such request in writing via the Portal.</p>
+    <p>In considering whether the requirements of these Special Conditions need to remain in place, Ofqual will consider whether UWL has demonstrated to Ofqual's satisfaction that it has capacity to undertake the development, delivery and award of qualifications which it makes available, or proposes to make available, in a way that complies with its <a href="#" class="govuk-link">Conditions of Recognition</a>.</p>
+    <p>If after review, Ofqual considers that some or all of the requirements of the Special Conditions no longer need to remain in place, the relevant requirements will be removed.</p>
+    <p>If Ofqual considers that some or all of the requirements need to remain in place, or that additional or alternative requirements need to be imposed, it may take one or more of the following steps, in isolation or combination:
+      <ol class="govuk-list ofq-legal-list ofq-legal-list-l1">
+        <li>set a new review date</li>
+        <li>amend the terms of the Special Conditions (by adding and/or removing requirements)</li>
+        <li>determine whether there has been a breach of the Special Conditions,</li>
+        <li>take any regulatory action set out in Ofqual's <a href="#" class="govuk-link">Taking Regulatory Action policy</a>.</li>
+      </ol>
+    </p>
+    <p>The process set out above is without prejudice to any other action that Ofqual may take in line with its <a href="#" class="govuk-link">Taking Regulatory Action policy</a>.</p>
+
+    <h3 class="govuk-heading-s">Requests for information</h3>
+    <p>Failure to provide the information as required by this Special Condition is a breach of the Special Conditions and Ofqual may take regulatory action.</p>
+    <p>If UWL is unable to provide the information or cannot provide it within the timescale required it should notify Ofqual as soon as practical, giving details as to why this cannot be provided.</p>
+    <p>Unless specifically requested UWL should redact personal information from any documents provided.</p>
+    <p>Where personal data is requested, UWL must consider whether any steps need to be taken in order to ensure compliance with data protection legislation.</p>
+    <p>Where personal data is being transferred, UWL may need to consider whether it needs to put in place any additional safeguards. Ofqual can provide assurance that it will process personal data in accordance with UK data protection legislation. For more details about how Ofqual processes personal data please see our privacy information. Awarding organisations must ensure that personal data is transferred securely.</p>
+    <p>All information submitted in response to the Special Conditions will be retained by Ofqual and may be used for other purposes in accordance with Ofqual's objectives and duties. Personal data will only be used for another compatible purpose and/or anonymised or pseudonymised where possible.</p>
+    <p>Ofqual is subject to the <a href="#" class="govuk-link">Freedom of Information (FOI) Act 2000</a> and we may be asked to disclose information under that Act. No personal data will be disclosed unless required by law. Where an awarding organisation indicates that it considers information submitted to us to be commercially sensitive, we will take this into account when considering any FOI request. However, it will be for Ofqual to determine whether the information must be disclosed or an exemption applied.</p>
+    <p>Ofqual may share information provided to it by UWL with other agencies or authorities where appropriate or where required by law.</p>
+  </div>
+</div>
+{% endblock %}

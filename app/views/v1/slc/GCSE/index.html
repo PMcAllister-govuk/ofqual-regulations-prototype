@@ -1,20 +1,87 @@
 {% extends "layouts/main.html" %}
 
-{% set pageName="Home" %}
+{% set serviceName = "Ofqual regulations" %}
+
+{% set pageName = "Regulations for GCSE subjects" %}
+
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block pageTitle %}
+  {{ pageName }} – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% set backLink = "../" %}
+
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "alpha"
+    },
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "../../"
+      },
+      {
+        text: "Regulations for specific subjects",
+        href: "../"
+      },
+      {
+        text: pageName
+      }
+    ]
+  }) }}
+{% endblock %}
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-row" data-module="edge">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">{{ pageName }}</h1>
 
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
-
-    <h1 class="govuk-heading-xl">
-      {{ serviceName }}
-    </h1>
-
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
+      <p class="govuk-body-m">For the following GCSE qsubjects, there are specific rules that apply. They are the subject-level conditions for GCSEs.</p>
+      <ul class="govuk-list govuk-list--spaced">
+        <li><a class="govuk-link" href="#">All GCSEs (9 to 1)</a></li>
+        <li><a class="govuk-link" href="#">Ancient history</a></li>
+        <li><a class="govuk-link" href="#">Ancient languages</a></li>
+        <li><a class="govuk-link" href="#">Art and design</a></li>
+        <li><a class="govuk-link" href="#">Astronomy</a></li>
+        <li><a class="govuk-link" href="#">Business</a></li>
+        <li><a class="govuk-link" href="#">Citizenship studies</a></li>
+        <li><a class="govuk-link" href="#">Classical civilisation</a></li>
+        <li><a class="govuk-link" href="#">Combined science (double award)</a></li>
+        <li><a class="govuk-link" href="computer-science/">Computer science</a> &lt; this one</li>
+        <li><a class="govuk-link" href="#">Dance</a></li>
+        <li><a class="govuk-link" href="#">Design and technology</a></li>
+        <li><a class="govuk-link" href="#">Drama</a></li>
+        <li><a class="govuk-link" href="#">Economics</a></li>
+        <li><a class="govuk-link" href="#">Electronics</a></li>
+        <li><a class="govuk-link" href="#">Engineering</a></li>
+        <li><a class="govuk-link" href="#">English language</a></li>
+        <li><a class="govuk-link" href="#">English literature</a></li>
+        <li><a class="govuk-link" href="#">Film studies</a></li>
+        <li><a class="govuk-link" href="#">Food preparation and nutrition</a></li>
+        <li><a class="govuk-link" href="#">Geography</a></li>
+        <li><a class="govuk-link" href="#">Geology</a></li>
+        <li><a class="govuk-link" href="#">History</a></li>
+        <li><a class="govuk-link" href="#">Mathematics</a></li>
+        <li><a class="govuk-link" href="#">Media studies</a></li>
+        <li><a class="govuk-link" href="#">Modern foreign languages</a></li>
+        <li><a class="govuk-link" href="#">Music</a></li>
+        <li><a class="govuk-link" href="#">Physical education</a></li>
+        <li><a class="govuk-link" href="#">Psychology</a></li>
+        <li><a class="govuk-link" href="#">Religious studies</a></li>
+        <li><a class="govuk-link" href="#">Single science (biology, chemistry and physics)</a></li>
+        <li><a class="govuk-link" href="#">Sociology</a></li>
+        <li><a class="govuk-link" href="#">Statistics</a></li>
+      </ul>
+    </div>
   </div>
-</div>
 
 {% endblock %}
