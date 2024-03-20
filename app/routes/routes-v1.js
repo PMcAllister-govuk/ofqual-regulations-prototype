@@ -65,19 +65,19 @@ module.exports = function (router) {
   })
 
   router.all('/' + version + '/slc/gcse', function (req, res) {
-    res.render(version + '/slc/gcse/index', { 'version': version })
+    res.render('/' + version + '/slc/gcse/index', { 'version': version })
   })
 
   router.all('/' + version + '/slc/gcse/index', function (req, res) {
-    res.render(version + '/slc/gcse/index', { 'version': version })
+    res.render('/' + version + '/slc/gcse/index', { 'version': version })
   })
 
   router.all('/' + version + '/slc/gcse/computer-science', function (req, res) {
-    res.render(version + '/slc/gcse/computer-science/index', { 'version': version })
+    res.render('/' + version + '/slc/gcse/computer-science/index', { 'version': version })
   })
 
   router.all('/' + version + '/slc/gcse/computer-science/index', function (req, res) {
-    res.render(version + '/slc/gcse/computer-science/index', { 'version': version })
+    res.render('/' + version + '/slc/gcse/computer-science/index', { 'version': version })
   })
 
   router.all('/' + version + '/special', function (req, res) {
