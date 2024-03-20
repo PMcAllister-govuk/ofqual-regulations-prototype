@@ -64,4 +64,36 @@ module.exports = function (router) {
     res.render(version + '/slc/index', { 'version': version })
   })
 
+  router.all('/' + version + '/slc/gcse', function (req, res) {
+    res.render(version + '/slc/gcse/index', { 'version': version })
+  })
+
+  router.all('/' + version + '/slc/gcse/index', function (req, res) {
+    res.render(version + '/slc/gcse/index', { 'version': version })
+  })
+
+  router.all('/' + version + '/slc/gcse/computer-science', function (req, res) {
+    res.render(version + '/slc/gcse/computer-science/index', { 'version': version })
+  })
+
+  router.all('/' + version + '/slc/gcse/computer-science/index', function (req, res) {
+    res.render(version + '/slc/gcse/computer-science/index', { 'version': version })
+  })
+
+  router.all('/' + version + '/special', function (req, res) {
+    res.render(version + '/special/index', { 'version': version })
+  })
+
+  router.all('/' + version + '/special/index', function (req, res) {
+    res.render(version + '/special/index', { 'version': version })
+  })
+
+  router.all('/' + version + '/special/2024-01-lcm', function (req, res) {
+    res.render(version + '/special/2024-01-lcm/index', { 'version': version })
+  })
+
+  router.all('/' + version + '/special/2024-01-lcm/index', function (req, res) {
+    res.render(version + '/special/2024-01-lcm/index', { 'version': version })
+  })
+  
 }
