@@ -1,0 +1,76 @@
+{% extends "layouts/main.html" %}
+
+{% set serviceName = "Ofqual regulations" %}
+
+{% set pageName = "Regulations for GCSE subjects in 2022" %}
+
+{% block pageTitle %}
+  {{ pageName }} – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% set backLink = "../" %}
+
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "alpha"
+    },
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "../../../"
+      },
+      {
+        text: "Archived regulations",
+        href: "../../"
+      },
+      {
+        text: "Regulations for specific subjects",
+        href: "../"
+      },
+      {
+        text: pageName
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" data-module="edge">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">{{ pageName }}</h1>
+
+      <p class="govuk-body-m">For the following GCSE subjects, there are specific rules that apply. They are the subject-level conditions for GCSEs.</p>
+      <ul class="govuk-list govuk-list--spaced">
+        <li><a class="govuk-link" href="#">GCSE subject-level conditions and requirements for art and design (2022)</a></li>
+        <li><a class="govuk-link" href="#">GCSE subject-level conditions and requirements for astronomy (2022)</a></li>
+        <li><a class="govuk-link" href="#">GCSE subject-level conditions and requirements for citizenship studies (2022)</a></li>
+        <li><a class="govuk-link" href="#">GCSE subject-level conditions and requirements for combined science (2022)</a></li>
+        <li><a class="govuk-link" href="#">GCSE subject-level conditions and requirements for dance (2022)</a></li>
+        <li><a class="govuk-link" href="#">GCSE subject-level conditions and requirements for design and technology (2022)</a></li>
+        <li><a class="govuk-link govuk-!-font-weight-bold" href="drama/">GCSE subject-level conditions and requirements for drama (2022)</a></li>
+        <li><a class="govuk-link" href="#">GCSE subject-level conditions and requirements for engineering (2022)</a></li>
+        <li><a class="govuk-link" href="#">GCSE subject-level conditions and requirements for English language and certificate requirements (2022)</a></li>
+        <li><a class="govuk-link" href="#">GCSE subject-level guidance for English language (2022)</a></li>
+        <li><a class="govuk-link" href="#">GCSE subject-level conditions and requirements for English literature (2022)</a></li>
+        <li><a class="govuk-link" href="#">GCSE subject-level conditions and requirements for film studies (2022)</a></li>
+        <li><a class="govuk-link" href="#">GCSE subject-level conditions and requirements for food preparation and nutrition (2022)</a></li>
+        <li><a class="govuk-link" href="#">GCSE subject-level conditions and requirements for geography (2022)</a></li>
+        <li><a class="govuk-link" href="#">GCSE subject-level conditions and requirements for geology (2022)</a></li>
+        <li><a class="govuk-link" href="#">GCSE subject-level conditions and requirements for history (2022)</a></li>
+        <li><a class="govuk-link" href="#">GCSE subject-level guidance for history (2022)</a></li>
+        <li><a class="govuk-link" href="#">GCSE subject-level conditions and requirements for media studies (2022)</a></li>
+        <li><a class="govuk-link" href="#">GCSE subject-level conditions and requirements for modern foreign languages and certificate requirements (2022)</a></li>
+        <li><a class="govuk-link" href="#">GCSE subject-level conditions and requirements for music (2022)</a></li>
+        <li><a class="govuk-link" href="#">GCSE subject-level conditions and requirements for physical education (2022)</a></li>
+        <li><a class="govuk-link" href="#">GCSE subject-level conditions and requirements for single science (2022)</a></li>
+      </ul>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,14 +1,14 @@
 {% extends "layouts/main.html" %}
 
-{% set docName = 'GCSE computer science subject-level conditions' %}
-{% set updateTime = '9:30am on 18 February 2019' %}
-{% set updateDay = '18 February 2019' %}
-{% set inForceFrom = '5:01pm on 18 February 2019' %}
-{% set docRef = 'OFR/SLC/GCSE/COMPSCI/2019-02-18/1' %}
+{% set docName = 'GCSE drama subject-level conditions for 2022' %}
+{% set updateTime = '9:30am on 11 November 2022' %}
+{% set updateDay = '11 November 2020' %}
+{% set inForceFrom = '9:30am on 12 November 2021' %}
+{% set docRef = 'OFR/SLC/GCSE2022/DRAMA/2021-11-11/1' %}
 {% set pageName=docName %}
 
 {% block pageTitle %}
-  {{ pageName }} – {{ serviceName }} – GOV.UK Prototype Kit
+  {{ pageName }} (archived) – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,10 +21,14 @@
 
   {{ govukBreadcrumbs({
     items: [
-      {
-        text: "Home",
-        href: "../../../"
-      },
+    {
+      text: "Home",
+      href: "../../../../"
+    },
+    {
+      text: "Archived regulations",
+      href: "../../../"
+    },
       {
         text: "Regulations for specific subjects",
         href: "../../"
@@ -49,11 +53,11 @@
       {{docName}}
     </h1>
 
-    {% if data.showArchived %}
+    {% if not data.hideArchived %}
 
       {{ govukNotificationBanner({
         html: '<p class="govuk-notification-banner__heading">
-          This document is no longer in force and is made available for reference only. It has not been replaced by any other document.</p>'
+          This document is no longer in force and is made available for reference only.</p>'
       }) }}
     {% endif %}
 
@@ -73,11 +77,11 @@
       <dl>
         <div class="govuk-grid-row">
           <dt class="govuk-grid-column-one-quarter govuk-!-font-weight-bold">Last updated</dt>
-          <dd class="govuk-grid-column-one-half"><time datetime="2019-02-18 09:30:00+00:00" lang="en">' + updateTime + '</time></dd>
+          <dd class="govuk-grid-column-one-half"><time datetime="2021-11-11 09:30:00+00:00" lang="en">' + updateTime + '</time></dd>
         </div>
         <div class="govuk-grid-row">
           <dt class="govuk-grid-column-one-quarter govuk-!-font-weight-bold">In force from</dt>
-          <dd class="govuk-grid-column-one-half"><time datetime="2019-02-18 17:01:00+00:00" lang="en">' + inForceFrom + '</time></dd>
+          <dd class="govuk-grid-column-one-half"><time datetime="2021-11-12 09:30:00+00:00" lang="en">' + inForceFrom + '</time></dd>
         </div>
         <div class="govuk-grid-row">
           <dt class="govuk-grid-column-one-quarter govuk-!-font-weight-bold">Document ref</dt>

@@ -2,14 +2,14 @@
 
 {% set serviceName = "Ofqual regulations" %}
 
-{% set pageName = "Regulations that apply to all awarding organisations" %}
+{% set pageName = "Regulations for specific subjects" %}
 
 {% block head %}
   {{ super() }}
 {% endblock %}
 
 {% block pageTitle %}
-  {{ pageName }} – {{ serviceName }} – GOV.UK Prototype Kit
+  {{ pageName }} (archived) – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% set backLink = "../" %}
@@ -26,6 +26,10 @@
     items: [
       {
         text: "Home",
+        href: "../../"
+      },
+      {
+        text: "Archived regulations",
         href: "../"
       },
       {
@@ -40,14 +44,12 @@
   <div class="govuk-grid-row" data-module="edge">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">{{ pageName }}</h1>
-      
-      <p class="govuk-body-s">The documents in this section apply to all organisations regulated by Ofqual, no matter which qualifications they offer.</p>
 
+      <p class="govuk-body-m">For some subjects and types of qualification, there were specific rules that applied to the subject being awarded. They are sometimes called subject-level conditions.</p>
       <ul class="govuk-list govuk-list--spaced">
-          <li><a class="govuk-link" href="#">Criteria for Recognition</a></li>
-          <li><a class="govuk-link" href="#">General Conditions of Recognition</a></li>
-          <li><a class="govuk-link" href="#">Criteria for determining whether a qualification is relevant for the purposes of the Education and Skills Act 2008</a></li>
-        </ul>
+        <li><a class="govuk-link" href="#">AS and A levels in 2022</a></li>
+          <li><a class="govuk-link govuk-!-font-weight-bold" href="gcses-in-2022/">GCSEs in 2022</a></li>
+      </ul>
     </div>
   </div>
 

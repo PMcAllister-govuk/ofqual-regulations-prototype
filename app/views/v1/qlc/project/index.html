@@ -7,6 +7,10 @@
 {% set docRef = 'OFR/QLC/PRJ/2023-07-31/1' %}
 {% set pageName=docName %}
 
+{% block pageTitle %}
+  {{ pageName }} – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
 {% block beforeContent %}
 {{ govukPhaseBanner({
   tag: {

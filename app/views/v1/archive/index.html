@@ -1,0 +1,73 @@
+{% extends "layouts/main.html" %}
+
+{% set serviceName = "Ofqual regulations" %}
+
+{% set pageName = "Archived regulations" %}
+
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block pageTitle %}
+  {{ pageName }} – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% set backLink = "../" %}
+
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "alpha"
+    },
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "../"
+      },
+      {
+        text: pageName
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" data-module="edge">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">{{ pageName }}</h1>
+      <p class="govuk-body">Regulations which are no longer in-force, and which have been removed, are kept in this archive section for reference only. To view old versions of currently in-force regulations, visit the 'version history' on the regulatory document in question.</p>
+      
+      <h2 class="govuk-heading-m">Regulations for types of qualifications</h2>
+
+        {{ govukDetails({
+          summaryText: "Description",
+          html: '<p class="govuk-body-s">The documents in this section applied to all organisations that offered these specific types of qualification. They are sometimes called qualification-level conditions.</p>'
+        }) }}
+
+        <ul class="govuk-list govuk-list--spaced">
+          <li><a class="govuk-link" href="#">14 to 19 Diploma</a></li>
+        </ul>
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Regulations for specific subjects</h2>
+
+        {{ govukDetails({
+          summaryText: "Description",
+          html: '<p class="govuk-body-s">For some subjects and types of qualification, there were specific rules that applied to the subject being awarded. They are sometimes called subject-level conditions.</p>'
+        }) }}
+
+        <ul class="govuk-list govuk-list--spaced">
+          <li><a class="govuk-link" href="#">AS and A levels in 2020</a></li>
+          <li><a class="govuk-link govuk-!-font-weight-bold" href="slc/gcses-in-2022/">GCSEs in 2022</a></li>
+        </ul>
+
+    </div>
+  </div>
+
+{% endblock %}
